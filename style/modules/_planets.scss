@@ -1,0 +1,119 @@
+#space, #exp{
+  font-size:16px;
+  width:100vw;
+  height:100vh;
+}
+
+#space{
+  background-image: url('img/black.jpg');
+  background-size:100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+#exp{
+  position:fixed;
+  margin:0;
+
+}
+.box{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+
+  a{
+    display:block;
+  }
+
+}
+
+.circle{
+  width:500px;
+  height:500px;
+  background: url('img/black.jpg') right bottom;
+  background-size:300%;
+  border-radius:50%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+#one{
+animation: 60s circle-rev linear infinite;
+}
+
+#two{
+  width:400px;
+  height:400px;
+  animation: 50s circle-rev linear infinite;
+}
+#three{
+  width:300px;
+  height:300px;
+  animation: 60s circle-rev linear infinite;
+}
+#four{
+  width:200px;
+  height:200px;
+  animation: 50s circle-rev linear infinite;
+}
+#five{
+  width:100px;
+  height:100px;
+  animation: 50s circle-rev linear infinite;
+}
+
+@keyframes circle {
+  from {
+    transform: rotoate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+@keyframes circle-rev {
+  from {
+    transform: rotate(360deg); }
+  to {
+    transform: rotate(0deg); } }
+
+.planet{
+  width:45px;
+  height:auto;
+  position:absolute;
+  margin-top:-100px;
+  margin-left:-55px;
+//  top:-150px;
+}
+.planet2{
+  margin-top:-100px;
+  margin-left:-20px;
+//  top:-150px;
+}
+.planet3{
+  margin-top:20px;
+  margin-left:-30px;
+//  top:-150px;
+}
+
+#expp{
+  .expl{
+    visibility:0;
+    display:none;
+  }
+  h3{  font-family:$Raleway;}
+  p{
+    font-family:$Lato;
+      max-width:250px;
+      font-weight:200;
+      text-align:justify;
+    }
+  .visible{
+   display:block;
+   color:white;
+   position:fixed;
+   margin:-100px 0 0 100px;
+   //animation:none;
+
+  }
+}
