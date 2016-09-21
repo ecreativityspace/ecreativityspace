@@ -1,91 +1,49 @@
 @import "https://fonts.googleapis.com/css?family=Abel|Open+Sans|Poiret+One|Quicksand|Raleway|Roboto|Ubuntu|Lato";
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 14px; }
-
-* {
-  font-size: 14px;
-  /*18px*/
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-a {
-  text-decoration: none;
-  color: inherit; }
-
-ul li {
-  list-style: none; }
-
-h1, h2, h3 {
-  font-weight: 100; }
-
-h1 {
-  font-size: 3rem;
-  text-transform: uppercase; }
-
-h2 {
-  font-size: 2rem; }
-
-h3 {
-  font-size: 1.5rem; }
-
-p, a {
-  font-family: "Lato", sans-serif; }
-
-.italic {
-  font-style: italic; }
-
-.center {
-  margin: auto auto; }
-
-.justify {
-  text-align: justify; }
-
-.container {
-  width: 95%;
-  margin: 0 auto; }
-  @media (min-width: 1000px) {
-    .container {
-      max-width: 1000px; } }
-
-.container-fluid {
-  width: 100%; }
-
-.wraper {
-  width: 95%;
-  margin: 0 auto; }
-  @media (min-width: 1000px) {
-    .wraper {
-      max-width: 800px; } }
-
-.col_2 {
-  width: 45%; }
-
-.col_3 {
-  width: 25%; }
-
-.right {
-  text-align: right; }
-
-.left {
-  text-align: left; }
-
-.flex-column {
+#load_screen {
   display: flex;
-  flex-direction: column; }
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  background-color: #272727;
+  overflow: hidden; }
 
-.flex-row {
-  display: flex;
-  flex-direction: row; }
+#spinner {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto; }
 
-@media (min-width: 500px) {
-  body {
-    font-size: 16px; }
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out; }
 
-  * {
-    font-size: 1rem; } }
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s; }
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
 #space, #exp {
   font-size: 16px;
   width: 100vw;
