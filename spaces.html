@@ -9,6 +9,13 @@
 		<title></title>
 </head>
 <body>
+  <div id="load_screen">
+    <div id="spinner">
+
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+    </div>
+  </div>
   <div id="space">
 
       <div class="box">
@@ -114,11 +121,9 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script>
-    /*$(document).ready(function(){
-      $("#planet_one").on('click', function(){
-        $("#expl_one").toggleClass('visible');
-      });
-    });*/
+     window.addEventListener("load", function() {
+       $('#load_screen').attr("style", "display:none");
+     });
     $(document).ready(function(){
       $(".box").children("#one").children("#planet_one").on('click', function(){
         $("#expp").children("#expl_one").toggleClass('visible').siblings().removeClass('visible');
